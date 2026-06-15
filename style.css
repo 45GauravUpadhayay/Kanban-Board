@@ -10,7 +10,7 @@ html,body{
 }
 
 html{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 :root{
@@ -18,7 +18,8 @@ html{
 
     --bg-color: #000;
     --bg-button-color: #1a1a1a;
-
+    --bg-task-color: #2a2a2a;
+    --delete-bg-color:#ff4d4d;
     /* Text Color */
 
     --primary-text-color: #f4f4f4;
@@ -85,6 +86,10 @@ section .task-coloumn{
     flex-grow: 1;
     background-color: var(--bg-button-color);
     padding: var(--padding-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+    border-radius: var(--border-radius-l);
 }
 
 section .task-coloumn .heading{
@@ -92,4 +97,26 @@ section .task-coloumn .heading{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+section .task-coloumn .task{
+    background-color: var(--bg-task-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-s);
+    cursor: grab;
+
+}
+
+section .task-coloumn .task button{
+    align-self: flex-end;
+    cursor: pointer;
+    padding: var(--border-radius-s) var(--padding-m);
+    border-radius: var(--border-radius-s);
+    border: none;
+    outline: none;
+    background-color: var(--delete-bg-color);
+    color: var(--primary-text-color);
 }
