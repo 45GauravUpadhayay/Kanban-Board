@@ -4,6 +4,8 @@ const done = document.querySelector("#done");
 
 const tasks = document.querySelectorAll(".task");
 
+
+
 // console.log(todo);
 
 tasks.forEach(task => {
@@ -13,7 +15,7 @@ tasks.forEach(task => {
 })
 
 function addDragEventsOnColoumn(){
-    
+
 }
 addDragEventsOnColoumn(todo);
 addDragEventsOnColoumn(Progress);
