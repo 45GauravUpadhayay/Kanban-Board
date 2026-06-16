@@ -12,7 +12,9 @@ tasks.forEach(task => {
     })
 })
 
-function addDragEventsOnColoumn
+function addDragEventsOnColoumn(){
+    
+}
 addDragEventsOnColoumn(todo);
 addDragEventsOnColoumn(Progress);
 addDragEventsOnColoumn(done);
