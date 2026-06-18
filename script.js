@@ -45,6 +45,7 @@ addDragEventsOnColoumn(Progress)
 const togglebtn = document.querySelector("#toggle-modal");
 const modal = document.querySelector(".modal");
 const modalBg = document.querySelector(".bg");
+const addTaskBtn = document.querySelector("#add-new-task");
 
 
 togglebtn.addEventListener("click",(e) => {
@@ -55,3 +56,30 @@ togglebtn.addEventListener("click",(e) => {
 modalBg.addEventListener("click", () => {
     modal.classList.remove("active");
 })
+
+addTaskBtn.addEventListener("click",() => {
+    const taskTitle = document.querySelector("#title").value;
+    const textArea = document.querySelector("#Description").value;
+
+    const div = document.createElement("div");
+
+    div.classList.add("task");
+    div.setAttribute("draggable", "true");
+
+    div.innerHTML = `
+        <h2>${taskTitle}</h2>
+        <p>${textArea}</p>
+        <button>Delete</button>
+    `;
+
+    div.addEventListener("drag", (e) => {
+        dragElement = div;
+    })
+
+    todo.appendChild(div)
+
+    modal.classList.remove("active")
+
+})
+
+// modal related logic
