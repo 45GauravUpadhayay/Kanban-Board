@@ -5,8 +5,6 @@ const done = document.querySelector("#done");
 const tasks = document.querySelectorAll(".task");
 let dragElement = null;
 
-
-
 // console.log(todo);
 
 tasks.forEach(task => {
@@ -42,3 +40,18 @@ addDragEventsOnColoumn(done);
 addDragEventsOnColoumn(todo);
 addDragEventsOnColoumn(Progress)
 
+// Modal Related Logic
+
+const togglebtn = document.querySelector("#toggle-modal");
+const modal = document.querySelector(".modal");
+const modalBg = document.querySelector(".bg");
+
+
+togglebtn.addEventListener("click",(e) => {
+    modal.classList.toggle("active")
+    console.log("clicked", e)
+})
+
+modalBg.addEventListener("click", () => {
+    modal.classList.remove("active");
+})
