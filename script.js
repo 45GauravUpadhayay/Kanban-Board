@@ -79,6 +79,15 @@ addTaskBtn.addEventListener("click",() => {
         <button>Delete</button>
     `;
 
+    const coloumn = [todo,Progress,done];
+
+    coloumn.forEach(col => {
+        const tasks = col.querySelectorAll(".task")
+        const count = col.querySelector(".right")
+
+        count.innerText = tasks.length;
+    })
+
     div.addEventListener("drag", (e) => {
         dragElement = div;
     })
