@@ -32,7 +32,14 @@ function addDragEventsOnColoumn(coloumn){
         console.log("Droped", dragElement, coloumn)
 
         coloumn.appendChild(dragElement);
-        coloumn.classList.remove("hover-over")
+        coloumn.classList.remove("hover-over");
+
+        [todo,Progress,done].forEach(col => {
+            const task = col.querySelectorAll(".task");
+            const count = col.querySelector(".right");
+
+            count.innerText = task.length;
+        })
     })
 }
 
