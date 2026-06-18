@@ -16,8 +16,6 @@ tasks.forEach(task => {
     })
 })
 
-
-
 function addDragEventsOnColoumn(coloumn){
     coloumn.addEventListener("dragenter",function(e){
         this.classList.add("hover-over")
@@ -43,3 +41,4 @@ function addDragEventsOnColoumn(coloumn){
 addDragEventsOnColoumn(done);
 addDragEventsOnColoumn(todo);
 addDragEventsOnColoumn(Progress)
+
